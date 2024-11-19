@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-
+//will be reversing string in this function
 void reverse_string(char str[], char reversed[]) {
     int len = strlen(str);
     int j = 0;
@@ -11,8 +11,8 @@ void reverse_string(char str[], char reversed[]) {
 }
 
 int main() {
-    char a[5][20];
-    char arev[5][20];
+    char a[5][20]; //array to store words
+    char arev[5][20];  //array to stored reversed words
     printf("Enter 5 words: \n");
     for (int i = 0; i < 5; i++) {
         scanf("%s", a[i]);
@@ -22,15 +22,15 @@ int main() {
         printf("%s\n", a[i]);
     }
     for (int i = 0; i < 5; i++) {
-        reverse_string(a[i], arev[i]);
+        reverse_string(a[i], arev[i]); //reversing words and storing in the array that was made to store reversed words
     }
     for(int i=0;i<5;i++){
-    int result = strcmp(a[i], arev[i]);
-    if(result==0){
-        printf("%s is a palindrome \n",a[i]);
+    int result = strcmp(a[i], arev[i]); //compares arrays of original words and reversed arrays
+    if(result==0){ 
+        printf("%s is a palindrome \n",a[i]); //if theyre same, they are palindrome
     }
     else{
-        printf("%s is not a palindrome\n",a[i]);
+        printf("%s is not a palindrome\n",a[i]); //else not palindrome obvio
     }
     }
     return 0;
