@@ -1,0 +1,39 @@
+#include <stdio.h>
+void max(int arr[10]){
+    int max_element=arr[0];
+    for(int i=0;i<5;i++){
+        if(max_element<arr[i]){
+            max_element=arr[i];
+        }
+    }
+    printf("%d",max_element);
+}
+void min(int arr[10]){
+    int min_element=arr[0];
+    for(int i=0;i<5;i++){
+        if(min_element>arr[i]){
+            min_element=arr[i];
+        }
+    }
+    printf("%d",min_element);
+}
+int main(){
+    int arr[10];
+    int c;
+    printf("enter an integer array (max 5 elements):");
+    for(int i=0;i<5;i++){
+    scanf("%d",&arr[i]);
+    }
+    printf("enter 1 to find maximum element and 2 to find minimum element:");
+    scanf("%d",&c);
+    if(c==1){
+        max(arr);
+    }
+    else if(c==2){
+        min(arr);
+    }
+    else{
+        printf("invalid input!");
+    }
+    return 0;
+}
