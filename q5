@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+
+void reversed(char str[45]){
+ int i,n;
+ n=strlen(str);
+ printf("reversed string is:");
+ for(i=n-1;i>=0;i--){
+    printf("%c",str[i]);
+ }
+}
+
+int main(){
+    char str[45];
+    printf("enter a string:");
+    scanf("%s",&str);
+    reversed(str);
+    return 0;
+}
